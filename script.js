@@ -26,42 +26,45 @@ form.addEventListener('submit', function (event) {
     }else
     if(birthDay.value < 0 || birthDay.value > 31   )  {
         errorDay.textContent = 'Must be a valid day';
-        birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
         isValid=false;
+        birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
     }
     else{
         errorDay.textContent = '';
-        birthDay.parentElement.querySelector('label[for="day"]').classList.remove('label-error');
+        
     }
     
     if( birthMonth.value === '')  {
         errorMonth.textContent = 'This field is required';
-        birthMonth.parentElement.querySelector('label[for="month"]').classList.add('label-error');
         isValid=false;
+        birthMonth.parentElement.querySelector('label[for="month"]').classList.add('label-error');
     }else
     if(birthMonth.value < 0 || birthMonth.value > 12 ){
         errorMonth.textContent = 'Must be a valid month';
-        birthMonth.parentElement.querySelector('label[for="month"]').classList.add('label-error');
         isValid=false;
+        birthMonth.parentElement.querySelector('label[for="month"]').classList.add('label-error');
     } 
     else{
+        
         errorMonth.textContent = '';
-        birthMonth.previousElementSibling.querySelector('label[for="month"]').classList.remove('label-error');
+        
     }
     
     if(birthYear.value === '' )  {
         errorYear.textContent = 'This field is required';
-        birthYear.parentElement.querySelector('label[for="year"]').classList.add('label-error');
+        
         isValid=false;
+        birthYear.parentElement.querySelector('label[for="year"]').classList.add('label-error');
     }else
     if(birthYear.value < 0 || birthYear.value > 2024 ){
         errorYear.textContent = 'must be a valid year';
-        birthYear.parentElement.querySelector('label[for="year"]').classList.add('label-error');
+        
         isValid=false;
+        birthYear.parentElement.querySelector('label[for="year"]').classList.add('label-error');
     }
     else{
         errorYear.textContent = '';
-        birthYear.parentElement.querySelector('label[for="year"]').classList.remove('label-error');
+        
     }
 
     //months with 31
@@ -71,7 +74,7 @@ form.addEventListener('submit', function (event) {
         if(birthMonth.value === month){
             if(birthDay.value > 31){
                 errorDay.textContent ='Must be a valid day';
-                birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
+                
                 errorMonth.textContent ='';
                 isValid=false;
             }
@@ -80,14 +83,10 @@ form.addEventListener('submit', function (event) {
         if(birthMonth === 2){
             if(birthDay > 28){
                 errorDay.textContent ='Must be a valid day';
-                birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
                 isValid=false;
             }
         }
-        else{
-            birthDay.textContent ='';
-            birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
-        }
+        
         
     });
     if(!isValid){
@@ -96,9 +95,7 @@ form.addEventListener('submit', function (event) {
     }
     else
     if(isValid){
-        birthDay.parentElement.querySelector('label[for="day"]').classList.add('label-error');
-        birthMonth.parentElement.querySelector('label[for="month"]').classList.add('label-error');
-        birthYear.parentElement.querySelector('label[for="year"]').classList.add('label-error');
+        
         const date = new Date();
         const dob =birthYear.value + '-' +birthMonth.value + '-' +birthDay.value;
         const birthdate = new Date(dob); 
