@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="" id="age-form">
+      <div class="inputs">
+        <div class="input">
+          <label for="day">Day</label>
+          <input name="day" type="number" id="day" placeholder="DD">
+          <span class="error" id="day-error"></span>
+        </div>
+        <div class="input">
+          <label for="month">Month</label>
+          <input name="month" type="number" id="month" placeholder="MM">
+          <span class="error" id="month-error"></span>
+        </div>
+        <div class="input">
+          <label for="year">Year</label>
+          <input name="year" type="number" id="year" placeholder="YYYY">
+          <span class="error" id="year-error"></span>
+        </div>       
+      </div>
+      <div class="button">
+        <button id="submit-button"><img src="./assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+    </form>
+    <div class="results">
+      <div class="result"><span class="purple" id="year-output">-&ThinSpace;-</span> years</div>
+      <div class="result"><span class="purple" id="month-output">-&ThinSpace;-</span> months</div>
+      <div class="result"><span class="purple" id="day-output">-&ThinSpace;-</span> days</div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/said-ops" target="_blank">Said</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
