@@ -175,4 +175,5 @@ label{
 }
 .label-error{
     color:var(--error-color);
+    text-transform:uppercase;
 }
